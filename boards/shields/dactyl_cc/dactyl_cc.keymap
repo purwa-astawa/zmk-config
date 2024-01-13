@@ -1,0 +1,39 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2 
+#define ADJUST  3
+
+#define HYPER(key) LS(LC(LA(LG(key))))
+#define MEH(key)   LS(LC(LA(key)))
+
+&sl {
+    release-after-ms = <5000>;
+};
+
+
+&kscan0 {
+    debounce-press-ms = <30>;
+    debounce-release-ms = <30>;
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+    &kp ESC   &kp Q     &kp W    &kp E     &kp R      &kp T                              &kp Y     &kp U     &kp I     &kp O     &kp P    &kp KP_EQUAL
+    &kp LALT  &kp A     &kp S    &kp D     &kp F      &kp G                              &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
+    &kp LSHFT &kp Z     &kp X    &kp C     &kp V      &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp BSLH
+              &mt LCTRL DEL &mt LALT GRAVE                                                                   &mt RCTRL BSPC &mt RALT DEL
+              &mt LALT DOWN &mt LCMD LEFT  &mo LOWER  &kp SPACE &kp TAB                  &kp ESC   &kp ENTER &mo RAISE &mt RALT UP &mt RCMD RIGHT
+            >;
+        };
+
+    };
+};
