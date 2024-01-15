@@ -37,9 +37,9 @@
 
         lower_layer {
             bindings = <
-    &trans   &kp N1    &kp N2   &kp N3    &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp BSPC
-    &trans   &trans    &kp HOME &kp PG_DN &kp PG_UP  &kp END                            &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &kp MINUS  
-    &trans   &trans    &trans   &trans    &trans     &trans                             &trans    &trans    &trans    &trans    &trans     &trans
+    &kp GRAVE &kp N1     &kp N2   &kp N3    &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp MINUS
+    &kp TAB   &kp EXCL   &kp AT   &kp HASH  &kp DLLR   &kp PRCNT                          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &kp UNDER
+    &trans    &kp CARET  &kp AMPS &kp STAR  &kp LPAR   &kp RPAR                           &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans     &trans
               &kp LBRC &kp RBRC                                                                    &kp LBKT  &kp RBKT
               &trans &trans &trans &trans &trans                                        &trans    &trans    &trans    &trans   &trans
             >;
