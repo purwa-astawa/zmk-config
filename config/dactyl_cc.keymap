@@ -39,7 +39,7 @@
             bindings = <
     &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6    &kp N7         &kp N8        &kp N9    &kp N0    &kp EQUAL
     &trans    &kp LBKT  &kp RBKT &kp LBRC  &kp RBRC  &kp PIPE                           &kp LEFT  &kp DOWN       &kp UP        &kp RIGHT &trans    &kp UNDER
-    &trans    &kp LPAR  &kp RPAR &kp LT    &kp GT    &kp FSLH                           &kp BSLH  &sk LS(LCTRL)  &sk LS(LALT)  &trans    &trans    &trans
+    &trans    &kp LPAR  &kp RPAR &kp LT    &kp GT    &kp FSLH                           &kp BSLH  &sk LS(LCTRL)  &sk LS(LALT)  &trans    &trans    &sk LS(LC(LALT))
               &kp PG_DN &kp PG_UP                                                                     &kp BSPC  &kp DEL
               &trans &trans &trans &trans &trans                                        &trans   &trans    &trans    &trans   &trans
             >;
