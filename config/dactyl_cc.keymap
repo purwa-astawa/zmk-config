@@ -38,8 +38,8 @@
         lower_layer {
             bindings = <
     &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6    &kp N7         &kp N8        &kp N9    &kp N0    &kp EQUAL
-    &trans    &kp LBKT  &kp RBKT &kp LBRC  &kp RBRC  &kp PIPE                           &kp LEFT  &kp DOWN       &kp UP        &kp RIGHT &trans    &kp UNDER
-    &trans    &kp LPAR  &kp RPAR &kp LT    &kp GT    &kp FSLH                           &kp BSLH  &sk LS(LCTRL)  &sk LS(LALT)  &trans    &trans    &sk LS(LC(LALT))
+    &trans    &kp LT    &kp LBKT &kp LBRC  &kp LPAR  &kp PIPE                           &kp LEFT  &kp DOWN       &kp UP        &kp RIGHT &trans    &kp UNDER
+    &trans    &kp GT    &kp RBKT &kp RBRC  &kp RPAR  &kp FSLH                           &kp BSLH  &sk LS(LCTRL)  &sk LS(LALT)  &trans    &trans    &sk LS(LC(LALT))
               &kp PG_DN &kp PG_UP                                                                     &kp BSPC  &kp DEL
               &trans &trans &trans &trans &trans                                        &trans   &trans    &trans    &trans   &trans
             >;
@@ -47,9 +47,9 @@
 
         raise_layer {
             bindings = <
-    &trans   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT                          &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6
-    &trans   &kp CARET &kp AMPS &kp STAR  &kp LPAR   &kp RPAR                           &kp F7    &kp F8    &kp F9    &kp 10    &kp 11    &kp F12
-    &trans   &trans    &trans   &trans    &trans     &trans                             &trans    &trans    &trans    &trans    &trans     &trans
+    &trans   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT                          &kp F1    &kp F2       &kp F3       &kp F4    &kp F5    &kp F6
+    &trans   &kp CARET &kp AMPS &kp STAR  &kp LPAR   &kp RPAR                           &kp F7    &kp F8       &kp F9       &kp 10    &kp 11    &kp F12
+    &trans   &trans    &trans   &trans    &trans     &trans                             &trans    &sk LS(LCMD) &sk LA(LCMD) &trans    &trans     &trans
              &kp PG_DN &kp PG_UP                                                                   &kp BSPC  &kp DEL
               &trans &trans &trans &trans &trans                                        &trans &trans    &trans    &trans   &trans
             >;
