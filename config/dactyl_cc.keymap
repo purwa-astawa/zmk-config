@@ -31,7 +31,7 @@
     &kp LALT  &kp A         &kp S         &kp D            &kp F      &kp G                 &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
     &kp LSHFT &kp Z         &kp X         &kp C            &kp V      &kp B                 &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp BSLH
                             &mt LCTRL HOME &lt ADJUST END                                                       &lt ADJUST BSPC &mt RCTRL DEL
-              &mt LALT DOWN &mt LCMD LEFT &lt LOWER GRAVE  &kp SPACE &mt LCTRL TAB              &mt RCTRL ESC   &mt LSHFT ENTER &lt RAISE BSPC &mt RCMD UP &mt RCTRL RIGHT
+              &mt LALT DOWN &mt LCMD LEFT &lt LOWER GRAVE  &kp SPACE &mt LCTRL TAB              &mt RCTRL ESC   &mt LSHFT ENTER &lt RAISE BSPC &mt RCMD UP &mt RALT RIGHT
             >;
         };
 
