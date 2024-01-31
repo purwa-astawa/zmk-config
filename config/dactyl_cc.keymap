@@ -4,9 +4,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2 
-#define ADJUST  3
+#define NAV     1
+#define NUM     2 
+#define SYM     3
+#define FUN     4
+#define ADJUST  5
 
 #define HYPER(key) LS(LC(LA(LG(key))))
 #define MEH(key)   LS(LC(LA(key)))
@@ -31,27 +33,47 @@
     &kp LALT  &kp A         &kp S         &kp D            &kp F      &kp G                 &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
     &kp LSHFT &kp Z         &kp X         &kp C            &kp V      &kp B                 &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp BSLH
                             &mt LCTRL HOME &lt ADJUST END                                                       &lt ADJUST BSPC &mt RCTRL DEL
-              &mt LALT DOWN &mt LCMD LEFT &lt LOWER GRAVE  &kp SPACE &mt LCTRL TAB              &mt RCTRL ESC   &mt LSHFT ENTER &lt RAISE BSPC &mt RCMD UP &mt RALT RIGHT
+              &lt FUN LEFT &mt LCMD DOWN &lt NAV GRAVE  &kp SPACE &mt LCTRL TAB              &mt RALT ESC   &mt LSHFT ENTER &lt NUM BSPC &mt RCMD UP &lt SYM RIGHT
             >;
         };
 
-        lower_layer {
+        nav_layer {
             bindings = <
-    &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6    &kp N7         &kp N8        &kp N9    &kp N0    &kp EQUAL
-    &trans    &kp LT    &kp LBKT &kp LBRC  &kp LPAR  &kp PIPE                           &kp LEFT  &kp DOWN       &kp UP        &kp RIGHT &trans    &kp UNDER
-    &trans    &kp GT    &kp RBKT &kp RBRC  &kp RPAR  &kp FSLH                           &kp BSLH  &sk LS(LCTRL)  &sk LS(LALT)  &trans    &trans    &sk LS(LC(LALT))
+    &kp GRAVE &none     &none    &none      &none     &none                              &kp HOME  &kp PG_DN   &kp PG_UP        &kp END    &none    &kp EQUAL
+    &trans    &kp LCTRL &kp LALT &kp LCMD   &kp LSHFT &none                              &kp LEFT  &kp DOWN    &kp UP           &kp RIGHT  &none    &kp UNDER
+    &trans    &none     &none    &none      &none     &none                              &kp BSLH  &sk LS(LCTRL)  &sk LS(LALT)  &none      &none    &sk LS(LC(LALT))
               &kp PG_DN &kp PG_UP                                                                     &kp BSPC  &kp DEL
-              &trans &trans &trans &trans &trans                                        &trans   &trans    &trans    &trans   &trans
+              &trans &trans &trans &trans &trans                                        &trans   &trans    &trans    &kp DEL   &kp BSPC
             >;
         };
 
-        raise_layer {
+        num_layer {
             bindings = <
-    &trans   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT                          &kp F1    &kp F2       &kp F3       &kp F4    &kp F5    &kp F6
-    &trans   &kp CARET &kp AMPS &kp STAR  &kp LPAR   &kp RPAR                           &kp F7    &kp F8       &kp F9       &kp 10    &kp 11    &kp F12
-    &trans   &trans    &trans   &trans    &trans     &trans                             &trans    &sk LS(LCMD) &sk LA(LCMD) &trans    &trans     &trans
+    &ESC     &kp N1  &kp N2   &kp N3  &kp N4   &kp N5                                   &none    &none        &none        &none     &none     &none
+    &trans   &kp N6  &kp N7   &kp N8  &kp N9   &kp N0                                   &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
+    &trans   &none   &none    &none   &none    &none                                    &none    &none        &none        &none     &none     &none
+             &kp CARET &kp DLLR                                                                   &kp BSPC  &kp DEL
+             &kp MINUS &kp PLUS &kp STAR &kp PRCNT &kp EQUAL                            &trans &trans    &trans    &trans   &trans
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+    &trans   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp CARET                          &none    &none        &kp F3       &kp F4    &kp F5    &kp F6
+    &trans   &kp AMPS  &kp LBKT &kp LBRC  &kp LPAR   &kp LT                             &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
+    &trans   &kp PIPE  &kp RBKT &kp RBRC  &kp RPAR   &kp GT                             &none    &none        &none        &none     &none     &none
+             &kp FSLH  &kp BSLH                                                                   &kp BSPC  &kp DEL
+             &kp MINUS &kp PLUS &kp STAR &kp PRCNT &kp EQUAL                            &trans &trans    &trans    &trans   &trans
+            >;
+        };
+
+        fun_layer {
+            bindings = <
+    &trans   &none    &none    &none      &none   &none                                &kp F1    &kp F2       &kp F3       &kp F4    &kp F5    &kp F6
+    &trans   &kp LCTRL &kp LALT &kp LCMD  &kp LSHFT &none                              &kp F7    &kp F8       &kp F9       &kp 10    &kp 11    &kp F12
+    &trans   &none    &none   &none    &none     &none                                 &none    &none        &none        &none     &none     &none
              &kp PG_DN &kp PG_UP                                                                   &kp BSPC  &kp DEL
-              &trans &trans &trans &trans &trans                                        &trans &trans    &trans    &trans   &trans
+             &trans &trans &trans &trans &trans                                        &trans &trans    &trans    &trans   &trans
             >;
         };
 
