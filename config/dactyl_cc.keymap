@@ -1,7 +1,9 @@
+#include "../includes/keypos_dactylcc.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "../includes/behaviours_homerow_mods.dtsi"
 
 #define DEFAULT 0
 #define NAV     1
@@ -29,10 +31,10 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp Q         &kp W         &kp E            &kp R      &kp T                 &kp Y     &kp U     &kp I     &kp O     &kp P    &kp MINUS
-    &kp LALT  &kp A         &kp S         &kp D            &kp F      &kp G                 &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
-    &kp LSHFT &kp Z         &kp X         &kp C            &kp V      &kp B                 &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp BSLH
-                            &mt LCTRL HOME &lt ADJUST END                                                       &lt ADJUST BSPC &mt RCTRL DEL
+    &kp ESC   &kp Q         &kp W          &kp E            &kp R                &kp T       &kp Y     &kp U               &kp I           &kp O        &kp P            &kp MINUS
+    &kp LALT  &hm_l LCTRL A &hm_l LALT S   &hm_l LCMD D     &hm_shift_l LSHFT F  &kp G       &kp H     &hm_shift_r RSFT J  &hm_r RCMD K    &hm_r RALT L &hm_r RCTRL SEMI &kp SQT
+    &kp LSHFT &kp Z         &kp X          &kp C            &kp V                &kp B       &kp N     &kp M               &kp COMMA       &kp DOT      &kp FSLH         &kp BSLH
+                            &mt LCTRL HOME &lt ADJUST END                                                                  &lt ADJUST BSPC &mt RCTRL DEL
               &lt FUN LEFT &mt LCMD DOWN &lt NAV GRAVE  &kp SPACE &mt LCTRL TAB              &mt RALT ESC   &mt LSHFT ENTER &lt NUM BSPC &mt RCMD UP &lt SYM RIGHT
             >;
         };
