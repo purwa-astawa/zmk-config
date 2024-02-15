@@ -57,9 +57,9 @@
 
         num_layer {
             bindings = <
-    &kp ESC     &kp N1  &kp N2   &kp N3  &kp N4   &kp N5                                   &none    &none        &none        &none     &none     &none
-    &trans   &kp N6  &kp N7   &kp N8  &kp N9   &kp N0                                   &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
-    &trans   &none   &none    &none   &none    &none                                    &none    &none        &none        &none     &none     &none
+    &kp ESC  &kp COMMA &kp N7   &kp N8  &kp N9   &kp LPAR                                   &none    &none        &none        &none     &none     &none
+    &trans   &kp DOT   &kp N4   &kp N5  &kp N6   &kp N0                                     &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
+    &trans   &kp FSLH  &kp N1   &kp N2  &kp N3   &kp RPAR                                   &none    &none        &none        &none     &none     &none
              &kp CARET &kp DLLR                                                                   &kp BSPC  &kp DEL
              &kp MINUS &kp PLUS &kp STAR &kp PRCNT &kp EQUAL                            &trans &trans    &trans    &trans   &trans
             >;
@@ -68,8 +68,8 @@
         sym_layer {
             bindings = <
     &trans   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp CARET                          &none    &none        &kp F3       &kp F4    &kp F5    &kp F6
-    &trans   &kp AMPS  &kp LBKT &kp LBRC  &kp LPAR   &kp LT                             &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
-    &trans   &kp PIPE  &kp RBKT &kp RBRC  &kp RPAR   &kp GT                             &none    &none        &none        &none     &none     &none
+    &trans   &kp AMPS  &kp LBKT &kp RBKT  &kp LPAR   &kp RPAR                           &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
+    &trans   &kp PIPE  &kp LBRC &kp RBRC  &kp LT     &kp GT                             &none    &none        &none        &none     &none     &none
              &kp FSLH  &kp BSLH                                                                   &kp BSPC  &kp DEL
              &kp MINUS &kp PLUS &kp STAR &kp PRCNT &kp EQUAL                            &trans &trans    &trans    &trans   &trans
             >;
