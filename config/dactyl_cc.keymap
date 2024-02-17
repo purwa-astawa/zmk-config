@@ -40,8 +40,8 @@
     &kp ESC   &kp Q         &kp W          &kp E            &kp R                &kp T       &kp Y     &kp U               &kp I           &kp O        &kp P            &kp MINUS
     &kp LALT  &hm_l LCTRL A &hm_l LALT S   &hm_l LCMD D     &hm_shift_l LSHFT F  &kp G       &kp H     &hm_shift_r RSFT J  &hm_r RCMD K    &hm_r RALT L &hm_r RCTRL SEMI &kp SQT
     &kp LSHFT &kp Z         &kp X          &kp C            &kp V                &kp B       &kp N     &kp M               &kp COMMA       &kp DOT      &kp FSLH         &kp BSLH
-                            &mt LCTRL HOME &lt ADJUST END                                                                  &lt ADJUST BSPC &mt RCTRL DEL
-              &lt FUN LEFT &mt LCMD DOWN &lt NAV GRAVE  &kp SPACE &mt LCTRL TAB              &mt RALT ESC   &mt LSHFT ENTER &lt NUM BSPC &mt RCMD UP &lt SYM RIGHT
+                            &mt LCTRL LBKT &lt ADJUST RBKT                                                                 &lt ADJUST LBRC &mt RCTRL RBRC
+              &lt FUN DEL &mt LCMD COMMA &lt NAV TILDE  &kp SPACE &mt LCTRL TAB              &mt RALT ESC   &mt LSHFT ENTER &lt NUM GRAVE &mt RCMD DOT &lt SYM BSPC
             >;
         };
 
