@@ -57,11 +57,11 @@
 
         adjust_layer {
             bindings = <
-    &kp GRAVE &kp N1     &kp N2   &kp N3    &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp MINUS
-    &kp TAB   &kp EXCL   &kp AT   &kp HASH  &kp DLLR   &kp PRCNT                          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &kp UNDER
-    &trans    &kp CARET  &kp AMPS &kp STAR  &kp LPAR   &kp RPAR                           &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans     &trans
-              &kp LBRC &kp RBRC                                                                    &kp LBKT  &kp RBKT
-              &trans &trans &trans &trans &trans                                        &trans    &trans    &trans    &trans   &trans
+    &kp ESC   &kp Q     &kp W    &kp E     &kp R      &kp T                              &kp Y     &kp U     &kp I     &kp O     &kp P    &kp KP_EQUAL
+    &kp LALT  &kp A     &kp S    &kp D     &kp F      &kp G                              &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
+    &kp LSHFT &kp Z     &kp X    &kp C     &kp V      &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp BSLH
+              &mt LCTRL DEL &lt ADJUST GRAVE                                                                   &mt RCTRL BSPC &lt ADJUST DEL
+                                 &mo LOWER  &kp SPACE &kp TAB                            &kp ESC   &mt LSHFT ENTER &lt RAISE BSPC 
             >;
         };
 
