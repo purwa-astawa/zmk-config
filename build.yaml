@@ -22,7 +22,3 @@ include:
     shield: dactyl_cc_left
   - board: nrfmicro_13
     shield: dactyl_cc_right
-  - board: pro_micro
-    shield: tightyl_left
-  - board: pro_micro
-    shield: tightyl_right
