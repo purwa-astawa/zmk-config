@@ -1,0 +1,69 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2 
+#define ADJUST  3
+
+#define HYPER(key) LS(LC(LA(LG(key))))
+#define MEH(key)   LS(LC(LA(key)))
+
+&sl {
+    release-after-ms = <5000>;
+};
+
+
+&kscan0 {
+    debounce-press-ms = <30>;
+    debounce-release-ms = <30>;
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+    &kp ESC   &kp Q     &kp W    &kp E     &kp R      &kp T                              &kp Y     &kp U     &kp I     &kp O     &kp P    &kp KP_EQUAL
+    &kp LALT  &kp A     &kp S    &kp D     &kp F      &kp G                              &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
+    &kp LSHFT &kp Z     &kp X    &kp C     &kp V      &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp BSLH
+              &mt LCTRL DEL &lt ADJUST GRAVE                                                                   &mt RCTRL BSPC &lt ADJUST DEL
+              &mt LALT DOWN &mt LCMD LEFT  &mo LOWER  &kp SPACE &kp TAB                  &kp ESC   &mt LSHFT ENTER &lt RAISE BSPC &mt RALT UP &mt RCMD RIGHT
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+    &kp GRAVE &kp N1     &kp N2   &kp N3    &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0     &kp MINUS
+    &kp TAB   &kp EXCL   &kp AT   &kp HASH  &kp DLLR   &kp PRCNT                          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &kp UNDER
+    &trans    &kp CARET  &kp AMPS &kp STAR  &kp LPAR   &kp RPAR                           &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans     &trans
+              &kp LBRC &kp RBRC                                                                    &kp LBKT  &kp RBKT
+              &trans &trans &trans &trans &trans                                        &trans    &trans    &trans    &trans   &trans
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+    &trans   &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10    &kp BSPC
+    &trans   &kp F11   &kp F12  &kp F13   &kp F14    &kp F15                            &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans     &trans
+    &trans   &trans    &trans   &trans    &trans     &trans                             &trans    &trans    &trans    &trans    &trans     &trans
+              &kp LBRC &kp RBRC                                                                    &kp LBKT  &kp RBKT
+              &trans &trans &trans &trans &trans                                        &trans    &trans    &trans    &trans   &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+    &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &bt BT_SEL 4         &none        &none       &none    &none    &none    &none
+    &none       &none        &none        &none        &sys_reset     &none                &none        &sys_reset  &none    &none    &none    &none
+    &bt BT_CLR  &none        &none        &none        &none          &bootloader          &bootloader  &none       &none    &none    &none    &bt BT_CLR
+                &trans       &trans                                                                                 &trans   &trans
+                &none        &none        &none        &none          &none                &none        &none       &none    &none   &none
+            >;
+        };
+
+    };
+};
