@@ -57,21 +57,21 @@
 
         num_layer {
             bindings = <
-    &kp PLUS  &kp MINUS &kp N7   &kp N8  &kp N9   &kp N0                                   &none    &none        &none        &none     &none     &none
-    &kp STAR  &kp FSLH   &kp N4   &kp N5  &kp N6   &kp LBKT                                &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
-    &kp EQUAL &kp PRCNT  &kp N1   &kp N2  &kp N3   &kp RBKT                                &none    &none        &none        &none     &none     &none
+    &kp PLUS  &kp MINUS &kp N7   &kp N8  &kp N9   &kp N0                                &kp LEFT &kp DOWN    &kp UP       &kp RIGHT   &none       &kp BSPC
+    &kp STAR  &kp FSLH   &kp N4   &kp N5  &kp N6   &kp LBKT                             &none    &kp LSHFT   &kp LCMD     &kp LALT    &kp LCTRL   &none
+    &kp EQUAL &kp PRCNT  &kp N1   &kp N2  &kp N3   &kp RBKT                             &none    &none    &none        &none     &none     &none
               &kp COMMA  &kp DOT                                                                   &kp BSPC  &kp DEL
-             &kp MINUS &kp PLUS &kp STAR &kp SPACE &kp EQUAL                            &trans &trans    &trans    &trans   &trans
+             &kp MINUS &kp PLUS &kp PIPE &kp SPACE &kp AMPS                            &trans &trans    &trans    &trans   &trans
             >;
         };
 
         sym_layer {
             bindings = <
-    &trans   &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp CARET                          &none    &none        &none        &none     &none     &none
-    &trans   &kp AMPS  &kp LBRC &kp RBRC  &kp LPAR   &kp RPAR                           &none    &kp LSHFT    &kp LCMD     &kp LALT  &kp LCTRL &none
-    &trans   &kp PIPE  &kp LBKT &kp RBKT  &kp LT     &kp GT                             &none    &none        &none        &none     &none     &none
-             &kp FSLH  &kp BSLH                                                                   &kp BSPC  &kp DEL
-             &kp MINUS &kp PLUS &kp STAR &kp SPACE &kp EQUAL                            &trans &trans    &trans    &trans   &trans
+    &kp GRAVE   &kp EXCL  &kp QMARK &kp FSLH  &kp HASH   &kp CARET                          &kp LEFT   &kp DOWN    &kp UP       &kp RIGHT  &none     &kp BSPC
+    &kp PRCNT   &kp LPAR  &kp EQUAL &kp GT    &kp LBRC   &kp AT                             &none      &kp LSHFT   &kp LCMD     &kp LALT   &kp LCTRL &none
+    &kp DLLR    &kp RPAR  &kp MINUS &kp LT    &kp RBRC   &kp STAR                             &none    &none        &none        &none     &none     &none
+             &kp COMMA  &kp DOT                                                                   &kp BSPC  &kp DEL
+             &kp MINUS &kp PLUS &kp PIPE &kp SPACE &kp AMPS                            &trans &trans    &trans    &trans   &trans
             >;
         };
 
